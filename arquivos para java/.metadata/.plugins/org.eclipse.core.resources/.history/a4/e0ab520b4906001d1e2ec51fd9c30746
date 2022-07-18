@@ -1,0 +1,47 @@
+package poo;
+
+/**
+ * @author Maria Fiori
+ *
+ */
+public class Veiculos {
+
+	public static void main(String[] args) {
+		Carros Jeep = new Carros();
+		Jeep.ano = 2020;
+		Jeep.cor = "Branco";
+		System.out.println("Jeep Renegade");
+		System.out.println("Ano: " + Jeep.ano);
+		System.out.println("Cor: " + Jeep.cor);
+		Jeep.ligar();
+		Jeep.acelerar();
+		Jeep.desligar();
+		
+	System.out.println("-------------------------------");
+	
+		Aviao Airbus = new Aviao();
+		Airbus.ano = 2013;
+		Airbus.modelo = "A380";
+		Airbus.cor = "Azul";
+		Airbus.envergadura = "80m";
+		System.out.println("Airbus");
+		System.out.println("Ano: " + Airbus.ano);
+		System.out.println("Cor: " + Airbus.cor);
+		System.out.println("Modelo: " + Airbus.modelo);
+		System.out.println("Envergadura: " + Airbus.envergadura);
+		Airbus.decolar();
+		Airbus.aterrizar();
+		
+		System.out.println("-------------------------------");
+		
+		Carros Sportline = new Carros(2020, "Azul petróleo");
+		System.out.println("Gol sportline");
+		System.out.println("Ano: " + Sportline.ano);
+		System.out.println("Cor: " + Sportline.cor);
+		Sportline.ligar();
+		Sportline.acelerar();
+		Sportline.desligar();
+	
+	}
+
+}

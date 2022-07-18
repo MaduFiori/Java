@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package estudos;
+
+/**
+ * @author Maria Fiori
+ * Elleição
+ */
+public class Votos {
+
+	public static void main(String[] args) {
+		System.out.println("Seu voto é obrigatótio ou facultativo?");
+		
+
+	}
+
+}

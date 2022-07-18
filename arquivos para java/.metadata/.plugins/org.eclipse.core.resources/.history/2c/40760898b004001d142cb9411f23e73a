@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package estudos;
+
+import java.util.Scanner;
+
+/**
+ * @author Maria Fiori
+ * Eleição
+ */
+public class Votos {
+
+	public static void main(String[] args) {
+		System.out.println("Seu voto é obrigatótio ou facultativo?");
+		String nome;
+		System.out.println("Nome: ");
+
+	}
+
+}

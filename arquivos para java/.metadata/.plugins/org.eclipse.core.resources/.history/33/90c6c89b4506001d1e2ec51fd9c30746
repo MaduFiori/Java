@@ -1,0 +1,19 @@
+package poo;
+	
+public class Aviao {
+	
+	int ano;
+	String modelo;
+	String cor;
+	String envergadura;
+	
+	
+	void decolar() {
+		System.out.println("Decolando");
+	}
+	
+	void aterrizar() {
+		System.out.println("Aterrizando");
+	}
+}
+	

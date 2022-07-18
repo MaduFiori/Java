@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;poo.Barcos.java&apos; to &apos;Barco.java&apos;&#x0D;&#x0A;- Original project: &apos;Javaestudos&apos;&#x0D;&#x0A;- Original element: &apos;poo.Barcos.java&apos;&#x0D;&#x0A;- Renamed element: &apos;poo.Barco.java&apos;" description="Rename compilation unit &apos;Barcos.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;poo{Barcos.java" name="Barco.java" references="false" stamp="1658114336853" version="1.0"/>
+</session>

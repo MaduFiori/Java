@@ -1,0 +1,22 @@
+/*
+ * Modificadores de acesso
+ */
+package contas;
+
+public class Conta {
+	
+	//atributos
+	public String cliente;
+	public double saldo;
+	public String tipo;
+	
+	//contrutor
+	public Conta() {
+		System.out.println("Agência 4057");
+	}
+	
+	//métodos
+	public void exibirSaldo() {
+		System.out.println("Saldo: R$ " + saldo);
+	}
+}

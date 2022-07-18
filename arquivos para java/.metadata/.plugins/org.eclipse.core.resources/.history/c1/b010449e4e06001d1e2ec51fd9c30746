@@ -1,0 +1,19 @@
+package contas;
+
+public class Conta {
+	
+	//atributos
+	String cliente;
+	double saldo;
+	String tipo;
+	
+	//contrutor
+	public Conta() {
+		System.out.println("Agência 4057");
+	}
+	
+	//métodos
+	void exibirSaldo() {
+		System.out.println("Saldo: R$ " + saldo);
+	}
+}

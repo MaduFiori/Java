@@ -1,0 +1,85 @@
+package poo;
+
+/**
+ * @author Maria Fiori
+ *
+ */
+public class Veiculos {
+
+	public static void main(String[] args) {
+		Carros Jeep = new Carros();
+		Jeep.ano = 2020;
+		Jeep.cor = "Branco";
+		System.out.println("Jeep Renegade");
+		System.out.println("Ano: " + Jeep.ano);
+		System.out.println("Cor: " + Jeep.cor);
+		Jeep.ligar();
+		Jeep.acelerar();
+		Jeep.desligar();
+		
+	System.out.println("-------------------------------");
+	
+		Aviao Airbus = new Aviao();
+		Airbus.ano = 2013;
+		Airbus.modelo = "A380";
+		Airbus.cor = "Azul";
+		Airbus.envergadura = "80m";
+		System.out.println("Airbus");
+		System.out.println("Ano: " + Airbus.ano);
+		System.out.println("Cor: " + Airbus.cor);
+		System.out.println("Modelo: " + Airbus.modelo);
+		System.out.println("Envergadura: " + Airbus.envergadura);
+		Airbus.decolar();
+		Airbus.aterrizar();
+		
+		System.out.println("-------------------------------");
+		
+		Carros Sportline = new Carros(2020, "Azul petróleo");
+		System.out.println("Gol sportline");
+		System.out.println("Ano: " + Sportline.ano);
+		System.out.println("Cor: " + Sportline.cor);
+		Sportline.ligar();
+		Sportline.acelerar();
+		Sportline.desligar();
+		
+		System.out.println("-------------------------------");
+		
+		Barco Iate = new Barco();
+		Iate.ano = 2014;
+		Iate.cor = "Branco";
+		Iate.tamanho = "24m";
+		System.out.println("Iate");
+		System.out.println("Ano: " + Iate.ano);
+		System.out.println("Cor: " + Iate.cor);
+		System.out.println("Tamnho: " + Iate.tamanho);
+		Iate.porto();
+		Iate.mar();
+		
+		/*
+		 * Polimorfismo:
+		 * 
+		 * Sobrescrever um void de uma herança
+		 * ou seja, o void original é modificado 
+		 * em outro modelo que não seja a raíz do void.
+		 * 
+		 * EXEMPLO
+		 * 
+		 * classe Carro
+		 * 
+		 * void ligar() {
+		 * 	System.out.println("Desengatado");
+		 * }
+		 * 
+		 * classe Aviao
+		 * 
+		 * void ligar() {
+		 * System.out.println("Ligado");
+		 * }
+		 * 
+		 * (classe avião tem herença e para modificar
+		 * tem que usar o mesmo nome da função original)
+		 */
+	
+	}
+
+}

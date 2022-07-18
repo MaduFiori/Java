@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package estudos;
+
+/**
+ * @author Maria Fiori
+ * Fundamnentos
+ */
+public class Fundamentos {
+
+	public static void main(String[] args) {
+		String nome = "Maria Eduarda";
+		System.out.println(nome);
+
+	}
+
+}

@@ -1,0 +1,68 @@
+/*
+ * Modificadores de acesso
+ * 
+ * public (para todo o projeto)
+ * private (acesso somente dentro da classe)
+ * protected (acesso a classes do mesmo pacote, 
+ * mas permite se criar herança)
+ * 
+ */
+package contas;
+
+public class Conta {
+	
+	//atributos
+	
+	private String cliente;
+	
+	public String getCliente() {
+		return cliente;
+	}
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
+	}
+	
+	private double saldo;
+	
+	public double setsaldo() {
+		return saldo;
+	}
+	public void setsaldo(double saldo) {
+		this.saldo = saldo;
+	}
+	
+	public String tipo;
+	
+	//contrutor
+	
+	public Conta() {
+		System.out.println("Agência 4057");
+	}
+	
+	//métodos
+	
+	public void exibirSaldo() {
+		System.out.println("Saldo: R$ " + saldo);
+	}
+	
+	void sacar(double valor) {
+		saldo -= valor;
+		System.out.println("Débito: R$" + valor);
+	}
+	
+	void depositar(double valor) {
+		saldo += valor;
+		System.out.println("Crédito: R$" + valor);
+	}
+	
+	void transferir(Conta destino, double valor) {
+		this.sacar(valor);
+		destino.depositar(valor);
+		System.out.println("Tranferência de R$ " + valor + " concluída");
+	}
+	
+	double soma(double conta1, double conta2) {
+		double total = conta1 + conta2;
+		return total;
+	}
+}

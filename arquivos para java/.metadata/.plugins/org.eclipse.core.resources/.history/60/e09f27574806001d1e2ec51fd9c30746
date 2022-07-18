@@ -1,0 +1,14 @@
+package poo;
+
+public class Barcos extends Carros{
+	
+	double tamanho;
+	
+	void porto() {
+		System.out.println("No porto");
+	}
+	
+	void mar() {
+		System.out.println("No mar");
+	}
+}

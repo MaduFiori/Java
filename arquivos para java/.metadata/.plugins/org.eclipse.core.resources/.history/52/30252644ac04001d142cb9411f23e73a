@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package estudos;
+
+/**
+ * @author Maria Fiori
+ * Fundamnentos
+ */
+public class Fundamentos {
+
+	public static void main(String[] args) {
+		String nome;
+		int idade = 18; 
+		char sexo = 'F';
+		double temperatura = 25.4;
+		boolean arCondicionado = false;
+		nome = "Maria Eduarda";
+		System.out.println("Uso de variáveis na linguagem JAVA");
+		System.out.println("");
+		
+		System.out.println("Exemplos: ");
+		System.out.println( "Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Temperatura: " + temperatura);
+		System.out.println("ArCondicionado: " + arCondicionado);
+		
+		System.out.println("______________________________");
+		System.out.println("");
+		
+		double i = 10;
+		System.out.println("Operadores aritmétricos e atribuições");
+		System.out.println("Exemplos: ");
+		System.out.println("i =  + i");
+	}
+
+}
