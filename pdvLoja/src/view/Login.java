@@ -5,12 +5,18 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.DAO;
+
 import java.awt.Toolkit;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.sql.Connection;
 
 public class Login extends JFrame {
 
@@ -42,6 +48,12 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowActivated(WindowEvent e) {
+				status();
+			}
+		});
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/favicon.png")));
 		setResizable(false);
 		setTitle("Login");
@@ -69,13 +81,43 @@ public class Login extends JFrame {
 		passwordField.setBounds(83, 64, 203, 20);
 		contentPane.add(passwordField);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(Login.class.getResource("/img/dboff.png")));
-		lblNewLabel_2.setBounds(7, 106, 64, 64);
-		contentPane.add(lblNewLabel_2);
+		lblstatus = new JLabel("");
+		lblstatus.setIcon(new ImageIcon(Login.class.getResource("/img/dboff.png")));
+		lblstatus.setBounds(35, 92, 64, 64);
+		contentPane.add(lblstatus);
 		
 		JButton btnNewButton = new JButton("Acessar");
 		btnNewButton.setBounds(197, 117, 89, 23);
 		contentPane.add(btnNewButton);
+	} //fim do construtor
+	
+	// Criação de um objeto para acessar a camada model
+	DAO dao = new DAO();
+	private JLabel lblstatus;
+	
+	
+	/**
+	 * Método usado para verificar o status do servidor
+	 */
+	
+	private void status() {
+		try {
+			// abrir a conexão
+			Connection con = dao.conectar();
+			if (con == null) {
+				//escolher a imagem
+				lblstatus.setIcon(new ImageIcon(Login.class.getResource("/img/dboff.png")));
+			} else {
+				lblstatus.setIcon(new ImageIcon(Login.class.getResource("/img/dbon.png")));
+			}
+			
+			//não esquecer de fechar a conexão
+			con.close();
+			
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		
 	}
-}
+	
+} //fim do código
