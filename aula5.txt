@@ -1,0 +1,54 @@
+Fazendo back-up do projeto Java desktop
+
+1) Localizar o workspace (Computador -> C: -> usuários)
+2) Simplesmente copiar a pasta do projeto
+
+Fazendo o restore de um projeto de sistema desktop Java
+
+1) Copiar a pasta do projeto no workspace
+2) Eclipse -> File -> import -> General
+3) Selecionar: Exixteing projects into workspace
+4) Select root directory -> browse (selecionar o workspace)
+5) Selecionar o projeto e clicar em Finish
+
+Obs: Abrir as classes geradas pelo Window Builder com o botão
+     direito do mouse (window builder)
+
+
+______________________________________________________________
+
+JDBC -> Conexão com o banco de dados
+Java Database Connectivity ou JDBC é um conjunto de classes e interfaces escritas em Java que fazem o envio de instruções SQL para qualquer banco de dados relacional
+
+JDBC
+Connection (responsável pela conexão)
+DriverManager (responsável pelo driver do banco)
+PreparedStaement (responsável pela query)
+ResultSet (responsável pelo resultado(retorno do banco))
+
+
+
+Passo 1: Obter o driver do banco de dados
+https://dev.mysql.com/downloads/connector/j/
+Atenção! Obter a versão compatível com o MySQL
+
+Passo 2: Obter as informações do banco de dados
+IP e porta do servidor: 10.26.49.x:3306
+usuário: root
+senha: 123@senac
+nome do banco: lojinha
+
+Passo 3: Vincular o driver no Java
+- copiar o driver para o pacote
+- botão direito -> build path -> Add to build path
+
+
+
+
+
+
+
+
+
+
+
