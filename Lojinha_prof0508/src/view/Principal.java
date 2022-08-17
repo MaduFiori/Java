@@ -17,6 +17,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import java.awt.Color;
 
 public class Principal extends JFrame {
 
@@ -26,6 +28,10 @@ public class Principal extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel lblData;
+	public JButton btnUsuarios;
+	public JButton btnRelatorios;
+	public JPanel panelUsu;
+	public JLabel lblUsu;
 
 	/**
 	 * Launch the application.
@@ -65,20 +71,21 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.addActionListener(new ActionListener() {
-			//evento clicar no botão
+		btnUsuarios = new JButton("");
+		btnUsuarios.setEnabled(false);
+		btnUsuarios.addActionListener(new ActionListener() {
+			//evento clicar no botï¿½o
 			public void actionPerformed(ActionEvent e) {
 				// Link para o jDialog
 				Usuarios usuarios = new Usuarios();
 				usuarios.setVisible(true);
 			}
 		});
-		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton.setToolTipText("Usu\u00E1rios");
-		btnNewButton.setIcon(new ImageIcon(Principal.class.getResource("/img/users.png")));
-		btnNewButton.setBounds(20, 23, 128, 128);
-		contentPane.add(btnNewButton);
+		btnUsuarios.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnUsuarios.setToolTipText("Usu\u00E1rios");
+		btnUsuarios.setIcon(new ImageIcon(Principal.class.getResource("/img/users.png")));
+		btnUsuarios.setBounds(20, 23, 128, 128);
+		contentPane.add(btnUsuarios);
 		
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -132,12 +139,13 @@ public class Principal extends JFrame {
 		btnNewButton_3.setBounds(20, 177, 128, 128);
 		contentPane.add(btnNewButton_3);
 		
-		JButton btnNewButton_1_2 = new JButton("");
-		btnNewButton_1_2.setToolTipText("Relat\u00F3rios");
-		btnNewButton_1_2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton_1_2.setIcon(new ImageIcon(Principal.class.getResource("/img/report.png")));
-		btnNewButton_1_2.setBounds(172, 177, 128, 128);
-		contentPane.add(btnNewButton_1_2);
+		btnRelatorios = new JButton("");
+		btnRelatorios.setEnabled(false);
+		btnRelatorios.setToolTipText("Relat\u00F3rios");
+		btnRelatorios.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnRelatorios.setIcon(new ImageIcon(Principal.class.getResource("/img/report.png")));
+		btnRelatorios.setBounds(172, 177, 128, 128);
+		contentPane.add(btnRelatorios);
 		
 		JButton btnNewButton_2_1 = new JButton("");
 		btnNewButton_2_1.setToolTipText("Ferramentas");
@@ -153,16 +161,21 @@ public class Principal extends JFrame {
 		btnNewButton_1_1_1.setBounds(472, 177, 128, 128);
 		contentPane.add(btnNewButton_1_1_1);
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(SystemColor.textHighlight);
-		panel.setBounds(0, 388, 624, 53);
-		contentPane.add(panel);
-		panel.setLayout(null);
+		panelUsu = new JPanel();
+		panelUsu.setBackground(SystemColor.textHighlight);
+		panelUsu.setBounds(0, 388, 624, 53);
+		contentPane.add(panelUsu);
+		panelUsu.setLayout(null);
 		
 		lblData = new JLabel("");
 		lblData.setForeground(SystemColor.window);
 		lblData.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblData.setBounds(325, 11, 289, 31);
-		panel.add(lblData);
+		panelUsu.add(lblData);
+		
+		lblUsu = new JLabel("");
+		lblUsu.setForeground(Color.WHITE);
+		lblUsu.setBounds(10, 11, 501, 14);
+		panelUsu.add(lblUsu);
 	}
 }
